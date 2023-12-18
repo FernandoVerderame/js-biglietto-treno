@@ -20,3 +20,20 @@ console.log(userAge);
 // 5 - A Calcolare il prezzo del biglietto (0.21 € al km)
 let totalPrice = userKilometres * 0.21;
 console.log(totalPrice);
+
+// 5 - B & C Sconto del 20% per i minorenni
+let discount20 = totalPrice * 20 / 100;
+let discount40 = totalPrice * 40 / 100;
+console.log(discount20, discount40);
+
+let discountPrice;
+
+if (userAge < 18) {
+    totalPrice += - discount20;
+}
+
+if (userAge > 65) {
+    totalPrice += - discount40;
+}
+
+console.log(totalPrice);
