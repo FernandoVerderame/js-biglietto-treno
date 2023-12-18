@@ -41,3 +41,9 @@ console.log(totalPrice);
 // ! 6 Prezzo finale (con massimo due decimali)
 totalPrice = Math.round((totalPrice + Number.EPSILON) * 100) / 100;
 console.log(totalPrice);
+
+// ! 7 Inseriamo il risultato nell'elemento HTML
+// Aggiorniamo il messaggio
+message += `<strong>${totalPrice} €</strong>`;
+
+paragraph.innerHTML = message;
