@@ -15,3 +15,8 @@ console.log(userKilometres);
 // ! 4 Chiedere all'utente l'età
 const userAge = prompt('Qual è la tua età?');
 console.log(userAge);
+
+// ! 5 Calcolare il prezzo totale del viaggio
+// 5 - A Calcolare il prezzo del biglietto (0.21 € al km)
+let totalPrice = userKilometres * 0.21;
+console.log(totalPrice);
