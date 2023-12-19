@@ -5,15 +5,15 @@ const paragraph = document.getElementById('result');
 let message = 'Il prezzo totale del viaggio è di: ';
 
 // ! 3 Chiedere all'utente il numero di chilometri da percorrere
-const userKilometres = prompt('Quanti chilometri vuoi percorrere?');
+const userKilometres = parseInt(prompt('Quanti chilometri vuoi percorrere?'));
 
 // ! 4 Chiedere all'utente l'età
-const userAge = prompt('Qual è la tua età?');
+const userAge = parseInt(prompt('Qual è la tua età?'));
 
 // Controllo scelta
 let errorMessage;
 
-if (isNaN(userKilometres) || isNaN(userAge) || userKilometres < 1 || userAge < 1)
+if (isNaN(userKilometres) || isNaN(userAge) || userKilometres <= 0 || userAge <= 0)
 errorMessage = 'Devi inserire un numero valido in entrambi i campi!';
 
 // ! 5 Calcolare il prezzo totale del viaggio
@@ -32,9 +32,7 @@ if (errorMessage) {
 
     if (userAge < 18) {
         totalPrice += - discount20;
-    }
-
-    if (userAge > 65) {
+    } else if (userAge > 65) {
         totalPrice += - discount40;
     }
 
